@@ -37,6 +37,6 @@ const DB_URI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@
   
 mongoose.connect(DB_URI)
 .then(result => {
-    app.listen(8000);
+    app.listen(process.env.PORT || 8000);
 })
 .catch(err => console.log(err));
